@@ -7,6 +7,8 @@ import statsmodels.api as sm
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LogisticRegression
 from itertools import combinations
+from sklearn.neighbors import KNeighborsClassifier
+
 
 # %%
 boston = pd.read_csv("Datasets\Boston.csv")
@@ -25,6 +27,7 @@ print(boston["crim01"].to_numpy())
 # b 
 # create a scatterplot matrix which compares each variable to mpg01
 sns.set_style("whitegrid")
+# hang in there, this is a long one
 sns.pairplot(boston, height=1, hue="crim01")
 plt.show()
 
